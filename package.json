@@ -1,0 +1,19 @@
+{
+  "name": "nexty",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Robert Szaloki <r.szaloki@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "next": "^9.1.7",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js"
+  }
+}
