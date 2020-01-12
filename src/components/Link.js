@@ -5,7 +5,7 @@ const Link = ({ children, ...props }) => {
 
     const base = (process.env.basePath || '').length > 1 ? process.env.basePath : '';
     const href = `${base}${format(props.href)}`
-    const as = !props.as ? href : `${base || ''}${format(props.href)}`
+    const as = !props.as ? href : `${base || ''}${format(props.as)}`
 
     return (<NextLink {...props}
         href={href}
