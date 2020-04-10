@@ -1,10 +1,11 @@
 import Navigation from '@components/Navigation.js'
-export default () => (
+export default ({fromServer}) => (
     <>
         <Navigation></Navigation>
         <div>
-            <h1>Alma</h1>
-            <p>alma6</p>
+            <h1>Körte</h1>
+            <p>körte - {fromServer}</p>
         </div>
     </>
 )
+
