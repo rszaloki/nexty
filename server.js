@@ -16,18 +16,9 @@ const distDir = conf.distDir || '.next';
 app.use(morgan('dev'));
 
 nextApp.prepare().then(() => {
-  app.use(`${conf.assetPrefix}/_next/static`, express.static(path.join(__dirname, distDir, '/static')));
+  app.use(`/_next/static`, express.static(path.join(__dirname, distDir, '/static')));
 
-  app.all(`${conf.assetPrefix}/_next/webpack-hmr`, (req, res) => {
-    req.url = req.url.slice(conf.assetPrefix.length);
-    return handle(req, res);
-  });
-
-  app.all([conf.assetPrefix, `${conf.assetPrefix}/*`], (req, res) => {
-    // just the pathName counts
-    if (req.url.endsWith('/')) {
-      req.url = req.url.slice(0, -1);
-    }
+  app.all('*', (req, res) => {
     return handle(req, res)
   });
 
