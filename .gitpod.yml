@@ -1,4 +1,4 @@
 tasks:
-  - init: yarn install && yarn run build
-    command: yarn run start
+  - init: yarn install
+    command: yarn run dev
 image: gitpod/workspace-full
