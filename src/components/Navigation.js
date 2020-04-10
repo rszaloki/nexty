@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 export default () => (<div>
-    <Link href="/">Home</Link> | 
-    <Link href="/alma">Alma</Link> |
-    <Link href="/korte">Körte</Link>
+    <Link href="/" prefetch={false}><a>Home</a></Link> | 
+    <Link href="/alma" prefetch={false}><a>Alma</a></Link> |
+    <Link href="/korte" prefetch={false}><a>Körte</a></Link>
 </div>)

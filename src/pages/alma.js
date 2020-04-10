@@ -12,5 +12,5 @@ export default ({fromServer}) => (
 export function getServerSideProps(ctx) {
     console.log('server side props');
     ctx.res.redirect('/korte');
-    return { props: {}};
+    return { };
 }
